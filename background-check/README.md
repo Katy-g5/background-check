@@ -40,9 +40,10 @@ WIKI_API_URL=https://en.wikipedia.org/api/rest_v1/page/summary
 ```
 
 4. Initialize the database:
+***Check the .env file – make sure DATABASE_URL points to a safe local/test DB.
 ```bash
 npx prisma generate
-npx prisma db push
+npx prisma migrate dev --name [name-of-migration]
 ```
 
 ## Development
